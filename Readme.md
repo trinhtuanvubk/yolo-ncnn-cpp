@@ -31,7 +31,6 @@ https://github.com/atanmarko/ncnn-with-cuda
 ```bash
 git clone https://github.com/Tencent/ncnn.git
 cd ncnn
-cd ncnn
 git submodule update --init
 mkdir -p build
 cd build
