@@ -31,6 +31,8 @@ https://github.com/atanmarko/ncnn-with-cuda
 ```bash
 git clone https://github.com/Tencent/ncnn.git
 cd ncnn
+cd ncnn
+git submodule update --init
 mkdir -p build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DNCNN_VULKAN=OFF -DNCNN_CUDA=OFF -DNCNN_RUNTIME_CPU=ON  -DNCNN_SYSTEM_GLSLANG=ON -DNCNN_SHARED_LIB=ON ..
