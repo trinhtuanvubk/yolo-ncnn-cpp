@@ -85,7 +85,7 @@ cmake ..
 make
 ```
 
-### Inferncen
+### Run
 
 - To infer:
 ```bash
