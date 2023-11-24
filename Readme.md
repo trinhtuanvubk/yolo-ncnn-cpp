@@ -21,24 +21,12 @@ https://github.com/atanmarko/ncnn-with-cuda
 |       |__eigen-3.3.9
 |       |__opencv-4.x
 |       |__yolov5_ncnn_cpp
-``````
-### Install NCNN
-- To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device.
-<!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
-
-- If you want to install ncnn with cpu (ubuntu) (after installing all required dependencies in `ncnn` repo):
-
-```bash
-git clone https://github.com/Tencent/ncnn.git
-cd ncnn
-git submodule update --init
-mkdir -p build
-cd build
-<!-- cmake -DCMAKE_BUILD_TYPE=Release -DNCNN_VULKAN=OFF -DNCNN_CUDA=OFF -DNCNN_RUNTIME_CPU=ON  -DNCNN_SYSTEM_GLSLANG=ON -DNCNN_SHARED_LIB=ON .. -->
-cmake -DCMAKE_BUILD_TYPE=Release -DNCNN_VULKAN=OFF -DNCNN_RUNTIME_CPU=ON -DNCNN_SYSTEM_GLSLANG=ON -DNCNN_BUILD_EXAMPLES=OFF -DNCNN_SHARED_LIB=ON ..
-make
-make install
 ```
+
+### Install NCNN
+
+- To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device or following me below 
+<!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
 
 - Install eigen-3.3.9 [[google]](https://drive.google.com/file/d/1rqO74CYCNrmRAg8Rra0JP3yZtJ-rfket/view?usp=sharing), [[baidu(code:ueq4)]](https://pan.baidu.com/s/15kEfCxpy-T7tz60msxxExg).
 
@@ -60,6 +48,30 @@ unzip opencv.zip
 mkdir -p build && cd build
 cmake  ../opencv-4.x
 cmake --build .
+```
+
+- To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device.
+<!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
+
+- Install protobuf (optional):
+
+```bash
+sudo apt update
+sudo apt-get install libprotobuf-dev protobuf-compiler
+```
+
+- If you want to install ncnn with cpu (ubuntu) (after installing all required dependencies in `ncnn` repo):
+
+```bash
+git clone https://github.com/Tencent/ncnn.git
+cd ncnn
+git submodule update --init
+mkdir -p build
+cd build
+# cmake -DCMAKE_BUILD_TYPE=Release -DNCNN_VULKAN=OFF -DNCNN_CUDA=OFF -DNCNN_RUNTIME_CPU=ON  -DNCNN_SYSTEM_GLSLANG=ON -DNCNN_SHARED_LIB=ON ..
+cmake -DCMAKE_BUILD_TYPE=Release -DNCNN_VULKAN=OFF -DNCNN_RUNTIME_CPU=ON -DNCNN_SYSTEM_GLSLANG=ON -DNCNN_BUILD_EXAMPLES=OFF -DNCNN_SHARED_LIB=ON ..
+make
+make install
 ```
 
 ### Build yolov5
