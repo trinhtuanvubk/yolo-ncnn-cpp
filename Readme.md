@@ -53,10 +53,11 @@ cmake --build .
 - To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device.
 <!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
 
-- Install protobuf (optional):
+- Install dependencies:
 
 ```bash
 sudo apt update
+sudo apt install build-essential git cmake libprotobuf-dev protobuf-compiler libvulkan-dev vulkan-utils libopencv-dev
 sudo apt-get install libprotobuf-dev protobuf-compiler
 ```
 
