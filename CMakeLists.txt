@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.11)
 project(yolov5)
 set(CMAKE_CXX_STANDARD 14)
+set(ncnn_DIR "/home/vutt/etc-workspace/cpp/ncnn/build/install/lib/cmake/ncnn" CACHE PATH "Directory that contains ncnnConfig.cmake")
 find_package(OpenCV 4 REQUIRED)
 find_package(ncnn REQUIRED)
 add_executable(${PROJECT_NAME} yolov5.cpp)
