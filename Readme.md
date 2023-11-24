@@ -19,14 +19,23 @@ https://github.com/atanmarko/ncnn-with-cuda
 |__cpp_root
 |       |__ncnn
 |       |__eigen-3.3.9
-|       |__opencv-4.x
+|       |__opencv_setup
 |       |__yolo_ncnn_cpp
 ```
 
 ### Install NCNN
 
-- To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device or following me below 
+To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device or following me below 
 <!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
+
+- Install dependencies:
+
+```bash
+sudo apt update
+sudo apt install build-essential git cmake libprotobuf-dev protobuf-compiler libvulkan-dev vulkan-utils libopencv-dev
+sudo apt-get install libprotobuf-dev protobuf-compiler
+sudo apt-get install libopencv-dev
+```
 
 - Install eigen-3.3.9 [[google]](https://drive.google.com/file/d/1rqO74CYCNrmRAg8Rra0JP3yZtJ-rfket/view?usp=sharing), [[baidu(code:ueq4)]](https://pan.baidu.com/s/15kEfCxpy-T7tz60msxxExg).
 
@@ -42,6 +51,7 @@ sudo make install
 - Install Opencv if needed ([quick install opencv](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html))
 
 ```bash
+mkdir opencv_setup && cd opencv_setup
 sudo apt update && sudo apt install -y cmake g++ wget unzip
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
 unzip opencv.zip
@@ -53,13 +63,6 @@ cmake --build .
 - To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device.
 <!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
 
-- Install dependencies:
-
-```bash
-sudo apt update
-sudo apt install build-essential git cmake libprotobuf-dev protobuf-compiler libvulkan-dev vulkan-utils libopencv-dev
-sudo apt-get install libprotobuf-dev protobuf-compiler
-```
 
 - If you want to install ncnn with cpu (ubuntu) (after installing all required dependencies in `ncnn` repo):
 
