@@ -20,7 +20,7 @@ https://github.com/atanmarko/ncnn-with-cuda
 |       |__ncnn
 |       |__eigen-3.3.9
 |       |__opencv-4.x
-|       |__yolov5_ncnn_cpp
+|       |__yolo_ncnn_cpp
 ```
 
 ### Install NCNN
@@ -75,10 +75,20 @@ make
 make install
 ```
 
-### Build yolov5
+### Build
 
-- To build yolov5s:
+- To build yolov5:
 ```bash
+cd yolov5
+mkdir build
+cd build
+cmake ..
+make
+```
+
+- To build yolov8:
+```bash
+cd yolov8
 mkdir build
 cd build
 cmake ..
@@ -87,11 +97,14 @@ make
 
 ### Run
 
-- To infer:
+- To infer yolov5:
 ```bash
 cd build
-./yolov5 ../test.jpg
+./yolov5 ../../test.jpg
 ```
 
-
-
+- To infer yolov8:
+```bash
+cd build
+./yolov8 ../../test.jpg
+```
