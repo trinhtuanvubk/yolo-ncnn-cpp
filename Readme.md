@@ -111,3 +111,8 @@ cd build
 cd build
 ./yolov8 ../../test.jpg
 ```
+
+### TODO
+- [] build ncnn with `-DNCNN_CUDA=ON` to test working with GPU
+- [] step by step to convert .pt to ncnn
+- [] check this line `yolov5.opt.use_vulkan_compute = true;`
