@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <vector>
 
+#include <chrono>
+
 #define MAX_STRIDE 32 // if yolov5-p6 model modify to 64
 
 struct Object
@@ -178,9 +180,9 @@ static int detect_yolov5(const cv::Mat& bgr, std::vector<Object>& objects)
 
 	// original pretrained model from https://github.com/ultralytics/yolov5
 	// the ncnn model https://github.com/nihui/ncnn-assets/tree/master/models
-	if (yolov5.load_param("../yolov5s.ncnn.param"))
+	if (yolov5.load_param("../models/yolov5s.ncnn.param"))
 		exit(-1);
-	if (yolov5.load_model("../yolov5s.ncnn.bin"))
+	if (yolov5.load_model("../models/yolov5s.ncnn.bin"))
 		exit(-1);
 
 	const int target_size = 640;
@@ -351,6 +353,7 @@ static void draw_objects(const cv::Mat& bgr, const std::vector<Object>& objects)
 	}
 
 	cv::imshow("image", image);
+	// cv::imwrite("image", image);
 	cv::waitKey(0);
 }
 
@@ -372,6 +375,14 @@ int main(int argc, char** argv)
 	}
 
 	std::vector<Object> objects;
+	// for (int i = 0; i < 20; ++i) {
+    //     // Your code here
+	// 	auto start = std::chrono::high_resolution_clock::now();
+	// 	detect_yolov5(m, objects);
+	// 	auto stop = std::chrono::high_resolution_clock::now();
+	// 	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+	// 	std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+    // }
 	detect_yolov5(m, objects);
 
 	draw_objects(m, objects);

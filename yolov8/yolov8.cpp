@@ -190,9 +190,9 @@ static int detect_yolov8(const cv::Mat& bgr, std::vector<Object>& objects)
 
 	// original pretrained model from https://github.com/ultralytics/ultralytics
 	// the ncnn model https://github.com/nihui/ncnn-assets/tree/master/models
-	if (yolov8.load_param("../yolov8s.ncnn.param"))
+	if (yolov8.load_param("../models/yolov8s.ncnn.param"))
 		exit(-1);
-	if (yolov8.load_model("../yolov8s.ncnn.bin"))
+	if (yolov8.load_model("../models/yolov8s.ncnn.bin"))
 		exit(-1);
 
 	const int target_size = 640;
