@@ -83,9 +83,9 @@ make install
 ```
 
 ### Export to ncnn
-Follow this (tutorial)[https://zhuanlan.zhihu.com/p/606536868] or follow me bellow:
+Follow this [tutorial](https://zhuanlan.zhihu.com/p/606536868) or follow me bellow:
 
-- Clone (Ultralytics)[https://github.com/ultralytics/ultralytics]:
+- Clone [Ultralytics](https://github.com/ultralytics/ultralytics):
 ```bash
 cd export_to_ncnn
 git clone https://github.com/ultralytics/ultralytics.git  # clone
