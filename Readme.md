@@ -64,7 +64,7 @@ cmake  ../opencv-4.x
 cmake --build .
 ```
 
-- To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device.
+<!-- - To install `ncnn`, please following [build tutorial of ncnn](https://github.com/Tencent/ncnn/wiki/how-to-build) to build on your own device. -->
 <!-- https://waittim.github.io/2020/11/10/build-ncnn/ -->
 
 
