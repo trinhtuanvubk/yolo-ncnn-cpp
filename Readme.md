@@ -137,6 +137,8 @@ unzip pnnx-20230217-ubuntu.zip
 ```bash
 ./pnnx-20230217-ubuntu/pnnx yolov8s.torchscript inputshape=[1,3,640,640] inputshape2=[1,3,320,320]
 ```
+
+- Move your <model_name>.param and <model_name>.bin to anywhere
 ### Build
 
 - To build yolov5:
